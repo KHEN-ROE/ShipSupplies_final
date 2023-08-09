@@ -40,45 +40,7 @@ $ (venv) python app.py
 ### 설치 및 실행
 > 1. 깃허브에서 프로젝트를 클론합니다.
 ```javascript
-git clone https://github.com/KHEN-ROE/ShipSupplies_final.git
-```
-<br />
-
-> 2. 프론트엔드 디렉토리에서 필요한 패키지를 설치합니다.
-```javascript
-npm install
-```
-
-> 3. MySQL에서 ship 데이터베이스를 생성하고, application.yml에서 username과 password를 개인의 설정에 맞게 바꿔줍니다.
-
-<br />
-
-## ✅ 기능
-- 사용자는 딥러닝 모델을 통해 선용품의 카테고리를 예측할 수 있습니다.
-- 사용자는 머신러닝 모델을 통해 선용품의 리드타임을 예측할 수 있습니다.
-- 사용자는 선용품을 검색할 수 있습니다.
-- 사용자는 개인 계정을 가지며, 위시리스트를 통해 리드타임을 포함한 선용품의 정보를 관리할 수 있습니다.
-- 사용자는 게시판을 통해 게시글과 댓글을 CRUD할 수 있습니다.
-- 사용자는 댓글에 좋아요를 남길 수 있습니다.
-
-<br />
-
-## ✅ 클래스 다이어그램
-
-<br />
-
-## ✅ ERD
-
-<br />
-
-## ✅ 역할
-> BE
-- API 설계
-- DB 설계
-- Validation
-- Interceptor 이용하여 사용자 인증
-- 예외처리
-- Docker와 AWS EC2이용하여 배포
+git clone https://github.com/KHEN-ROE/ShipSupp활용하여 배포
 
 > FE
 - React 이용하여 프론트엔드 개발
