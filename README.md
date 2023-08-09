@@ -94,6 +94,14 @@ npm install
   - Database: MySQL
   - Data Analysis: tensorflow
   - Deployment: AWS, Docker
+
+## ✅ 개발자 정보
+ - Name : KEN
+ - Email: shdnrnjs@gmail.com
+ - Github : http://github.com/KHEN-ROE
+ 
+ ## ✅ 기여방법
+  - 버그나 기능 개선 제안은 이슈로 등록해주세요.
  
 
 
