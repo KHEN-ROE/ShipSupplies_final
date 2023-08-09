@@ -1,0 +1,98 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 75vw;
+    /* height: 50vh; */
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+table th, table td {
+    border: none;
+    padding: 10px;
+}
+
+.boardList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+
+}
+
+.writebtn {
+    margin-bottom: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin-left: 1250px;
+    width: 100px;
+    background-color: seashell;
+}
+
+.h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.postDetail {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.writingDetail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.rpbtn {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80px;
+    padding: 1px;
+    background-color: gainsboro;
+}
+
+.wrtTable {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    caret-color: transparent;
+}
+
+.h-96 {
+    height: 60vh;
+    border: none;
+    background-color: white;
+    caret-color: transparent;
+}
+
+.wrtBtn {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 80px;
+    padding: 1px;
+    background-color: gainsboro;
+    margin-top: 10px;
+}
+
+.deleteBtn {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.cancelBtn {
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+
+.cmtDeleteBtn {
+    margin-left: 10px;
+}

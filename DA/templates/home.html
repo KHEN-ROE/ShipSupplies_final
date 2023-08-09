@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <center>
+        <h1> Classification PREDICTION</h1>
+
+        <form method='POST', action='/item/predict/classify'>
+           <b>청구품목 : <input type="text", name='a', placeholder="청구품목", required> <br><br><br>
+           발주처 : <input type="text", name='b', placeholder="발주처", required> <br><br><br>
+           Machinery :  <input type="text", name='c', placeholder="Machinery", required> <br><br>
+            Assembly :  <input type="text", name='d', placeholder="Assembly", required> <br><br>
+            Part No.1 :  <input type="text", name='e', placeholder="Part No.1", required> <br><br>
+            Part No.2 :  <input type="text", name='f', placeholder="Part No.2", required> <br><br>
+            </b>
+            <input type="submit" , value='predict'>
+        </form>
+
+        <p>
+            예시 데이터 <br>
+            Machinery : NO.1 FIRE WASH DOWN PUMP <br>
+            Assembly : PUMP REPAIR KIT <br>
+            Part No.1 : 4476 <br>
+            청구품목  : GASKET-CASING <br>
+
+            <br><br>
+            결과값 => : GASKET
+            <hr>
+
+            예시 데이터 1<br>
+            Machinery : MAIN BOOM DOUBLE WINCH <br>
+            Assembly : BRAKE GROUP <br>
+            Part No.1 : 21036 <br>
+            청구품목  : SUNGEAR <br>
+
+            <br><br>
+            결과값 => : GEAR
+
+        </p>
+    </center>
+
+
+</body>
+</html>
