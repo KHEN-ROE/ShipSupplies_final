@@ -61,7 +61,7 @@ npm install jwt-decode
 - Interceptor 이용하여 사용자 인증
 - Validation
 - 예외처리
-- Docker, AWS EC2 활용하여 배
+- Docker, AWS EC2 활용하여 배포
 
 > FE
 - React 이용하여 프론트엔드 개발
