@@ -98,7 +98,6 @@ sequenceDiagram
 ```
 <br />
 
-/*## ✅ ERD*/
 
 <br />
 
