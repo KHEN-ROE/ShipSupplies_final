@@ -84,7 +84,18 @@ npm install jwt-decode
 <br />
 
 ## ✅ 클래스 다이어그램
-
+```mermaid
+sequenceDiagram
+    React->>SpringBoot: 독립변수 6개 전달
+    Note over React,SpringBoot: 리드타임, 카테고리 <br /> 예측을 위한 6개의 필드
+    SpringBoot->>Flask: 데이터 분석 및 처리 요청
+    Note over SpringBoot, Flask: 리액트로부터 받은 6개의 필드 전달
+    Note over Flask: 머신러닝 모델을 통하여 결과값 도출   
+    Flask->>SpringBoot: 처리 결과 반환
+    Note over Flask, SpringBoot: 예측된 카테고리, 리드타임
+    SpringBoot->>React: 처리 결과 반환
+    Note over React: 카테고리, 리드타임 출력
+```
 <br />
 
 ## ✅ ERD
