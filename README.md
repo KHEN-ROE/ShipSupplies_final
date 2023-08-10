@@ -15,6 +15,16 @@ http://43.200.163.145:3000
 
 <br />
 
+## ✅ 기능
+- 사용자는 딥러닝 모델을 활용하여 선용품의 카테고리를 예측할 수 있습니다.
+- 사용자는 머신러닝 모델을 활용하여 선용품의 리드타임을 예측할 수 있습니다.
+- 사용자는 선용품을 검색할 수 있으며, 원하는 선용품을 위시리스트에 담을 수 있습니다.
+- 각 사용자는 개인 계정을 가지며, 위시리스트를 통해 선용품의 정보를 관리할 수 있습니다.
+- 사용자는 게시판을 이용하여 게시글과 댓글을 CRUD할 수 있습니다.
+- 사용자는 댓글에 좋아요를 남길 수 있습니다.
+
+<br />
+
 ## ✅ 시작하기
 ### 사전요구 사항
 > Back-End
@@ -83,7 +93,7 @@ npm install jwt-decode
 
 ## ✅ 사용된 기술
   - Frontend: React
-  - Backend: Spring Boot
+  - Backend: Spring Boot, JPA
   - Database: MySQL
   - Data Analysis: tensorflow
   - Deployment: AWS, Docker
