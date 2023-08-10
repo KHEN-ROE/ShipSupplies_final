@@ -92,7 +92,7 @@ sequenceDiagram
     Note over SpringBoot, Flask: 리액트로부터 받은 6개의 필드 전달
     Note over Flask: 머신러닝 모델을 통하여 결과값 도출   
     Flask->>SpringBoot: 처리 결과 반환
-    Note over Flask, SpringBoot: 예측된 카테고리, 리드타임
+    Note over SpringBoot: 위시리스트에 요청한 선용품 정보와 <br /> 예측된 리드타임 저장
     SpringBoot->>React: 처리 결과 반환
     Note over React: 카테고리, 리드타임 출력
 ```
