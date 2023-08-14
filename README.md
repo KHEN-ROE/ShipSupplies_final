@@ -163,8 +163,8 @@ erDiagram
     USER ||--o{ HIT : does
     USER ||--o{ WISHLIST: has
     BOARD ||--o{ COMMENT : has
-    BOARD ||--o{ HIT : receives
-    COMMENT ||--o{ HIT : receives
+    BOARD ||--o{ HIT : has
+    COMMENT ||--o{ HIT : has
 ```
 
 <br />
