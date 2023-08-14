@@ -14,6 +14,7 @@ import reactor.core.publisher.Mono;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -31,7 +32,7 @@ public class ItemService {
                 .map(item -> new ItemListDto(item.getId(), item.getItem(), item.getMachinery(), item.getAssembly(),
                         item.getPartNo1(), item.getCategory(), item.getCompany(), item.getCurrency(),
                         item.getPrice(), item.getShip(), item.getSubject()))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // 검색창에서 카테고리만 출력
@@ -57,7 +58,7 @@ public class ItemService {
                 .map(item -> new ItemListDto(item.getId(), item.getItem(), item.getMachinery(), item.getAssembly(),
                         item.getPartNo1(), item.getCategory(), item.getCompany(), item.getCurrency(),
                         item.getPrice(), item.getShip(), item.getSubject()))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // 특정 부품명 포함하는 모든 행 출력
@@ -68,7 +69,7 @@ public class ItemService {
                 .map(items -> new ItemListDto(items.getId(), items.getItem(), items.getMachinery(), items.getAssembly(),
                         items.getPartNo1(), items.getCategory(), items.getCompany(), items.getCurrency(),
                         items.getPrice(), items.getShip(), items.getSubject()))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // 특정 발주처 포함하는 모든 행 출력
@@ -79,7 +80,7 @@ public class ItemService {
                 .map(item -> new ItemListDto(item.getId(), item.getItem(), item.getMachinery(), item.getAssembly(),
                         item.getPartNo1(), item.getCategory(), item.getCompany(), item.getCurrency(),
                         item.getPrice(), item.getShip(), item.getSubject()))
-                .toList();
+                .collect(Collectors.toList());
     }
 
     // 과거 리드타임 추이
@@ -104,7 +105,7 @@ public class ItemService {
 
         WebClient webClient = WebClient.create();
 
-        String flaskUrl = "http://localhost:5000/api/item/predict/classify";
+        String flaskUrl = "http://43.200.163.145:5000/api/item/predict/classify";
 
         Map<String, String> map = new HashMap<>();
         map.put("a", data.get("Machinery"));
@@ -124,6 +125,7 @@ public class ItemService {
 
     public Mono<String> predLeadtime(Map<String, String> data) {
 
+//        String flaskUrl = "http://43.200.163.145:5000/api/item/predict/regression";
         String flaskUrl = "http://localhost:5000/api/item/predict/regression";
 
         WebClient webClient = WebClient.create();

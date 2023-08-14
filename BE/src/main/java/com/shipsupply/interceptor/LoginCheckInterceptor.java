@@ -24,10 +24,8 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
             log.info("미인증 사용자 요청");
             log.info("{}", handler);
 
-            throw new SessionExpiredException("사용자 정보 없음"); // 세션 만료 예외로 변경할 것
+            throw new SessionExpiredException("사용자 정보 없음");
         }
-
         return true;
-
     }
 }

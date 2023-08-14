@@ -1,5 +1,6 @@
 package com.shipsupply.entity;
 
+import com.shipsupply.common.BaseEntity;
 import com.shipsupply.dto.AddAndUpdateCommentDto;
 import lombok.*;
 
@@ -12,7 +13,7 @@ import java.util.Objects;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Comment {
+public class Comment extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id; //num 말고 id 쓰는게 관례
@@ -48,16 +49,16 @@ public class Comment {
     }
 
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Comment comment )) return false;
-        return Objects.equals(getId(), comment.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Comment comment )) return false;
+//        return Objects.equals(getId(), comment.getId());
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getId());
+//    }
 
 }

@@ -13,6 +13,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @Transactional
@@ -31,7 +32,7 @@ public class WishListService {
                 .map(wishList -> new WishListDto(wishList.getId(), wishList.getItem(), wishList.getCategory(),
                         wishList.getMachinery(), wishList.getCurrency(),
                         wishList.getPrice(), wishList.getCompany(), wishList.getLeadtime()))
-                .toList();
+                .collect(Collectors.toList());
     }
 
 

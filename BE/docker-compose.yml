@@ -34,7 +34,7 @@ services:
   react-app:
     container_name: react-app
     image: react-app
-    build: ../../fe  # 리액트 앱의 Dockerfile 경로
+    build: ../fe  # 리액트 앱의 Dockerfile 경로
     ports:
       - "3000:3000"
     networks:
@@ -43,7 +43,7 @@ services:
   flask-app:
     container_name: flask-app
     image: flask-app
-    build: ../../da  # 플라스크 앱의 Dockerfile 경로
+    build: ../da  # 플라스크 앱의 Dockerfile 경로
     ports:
       - "5000:5000"
     networks:

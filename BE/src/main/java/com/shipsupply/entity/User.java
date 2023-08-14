@@ -1,19 +1,18 @@
 package com.shipsupply.entity;
 
-import com.shipsupply.config.PasswordEncrypter;
+import com.shipsupply.common.BaseEntity;
 import com.shipsupply.dto.CreateUserDto;
 import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.util.Objects;
 
 @Entity
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
-public class User {
+public class User extends BaseEntity {
 
     @Id
     @Column(name = "userId")
@@ -49,16 +48,16 @@ public class User {
         return new User(createUserDto.getId(), password, createUserDto.getEmail(), createUserDto.getUsername(), createUserDto.getRole());
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof User user)) return false;
-        return Objects.equals(getId(), user.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof User user)) return false;
+//        return Objects.equals(getId(), user.getId());
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getId());
+//    }
 
 }

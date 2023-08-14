@@ -1,5 +1,6 @@
 package com.shipsupply.entity;
 
+import com.shipsupply.common.BaseEntity;
 import com.shipsupply.dto.AddWishListDto;
 import lombok.*;
 
@@ -9,7 +10,7 @@ import javax.persistence.*;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class WishList {
+public class WishList extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;

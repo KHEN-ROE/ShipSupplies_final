@@ -42,8 +42,6 @@ public class UserService {
         userRepository.save(user);
     }
 
-
-
     public LoginResponseDto login(LoginDto loginDto, HttpServletRequest request) {
 
         User findUser = userRepository.findById(loginDto.getId()).orElseThrow(() -> new IllegalStateException("존재하지 않는 회원"));
@@ -55,7 +53,7 @@ public class UserService {
         String encryptedPassword = PasswordEncrypter.encrypt(loginDto.getPassword());
 
         if (encryptedPassword.equals(findUser.getPassword())) {
-            // 로그인 성공시 쿠키에 JSESSIONID 저장
+            // 로그인 성공시 쿠키에 JSESSIONID(세션을 식별할 수 있는 id) 저장. 즉, 쿠키에 값을 리턴하는 로직 없어도 세션id가 쿠키 형태로 저장됨.
             LoginResponseDto loginResponseDto = new LoginResponseDto(findUser.getId(), findUser.getUsername(), findUser.getEmail());
             // 세션에 사용자 ID 저장
             HttpSession session = request.getSession();

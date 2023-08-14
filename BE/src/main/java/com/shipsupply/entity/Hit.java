@@ -1,5 +1,6 @@
 package com.shipsupply.entity;
 
+import com.shipsupply.common.BaseEntity;
 import lombok.*;
 
 import javax.persistence.*;
@@ -9,7 +10,7 @@ import java.util.Objects;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Hit {
+public class Hit extends BaseEntity {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long hit;
@@ -36,16 +37,16 @@ public class Hit {
         return new Hit(user, board, comment);
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Hit hit)) return false;
-        return Objects.equals(getHit(), hit.getHit());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getHit());
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Hit hit)) return false;
+//        return Objects.equals(getHit(), hit.getHit());
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getHit());
+//    }
 
 }

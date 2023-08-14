@@ -1,17 +1,17 @@
 package com.shipsupply.entity;
 
+import com.shipsupply.common.BaseEntity;
 import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.Date;
-import java.util.Objects;
 
 @Entity
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Item {
+public class Item extends BaseEntity {
 
     @Id //@GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -29,16 +29,16 @@ public class Item {
     private Long price;
     private Date date;
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Item item)) return false;
-        return Objects.equals(getId(), item.getId());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getId());
-    }
+//    @Override
+//    public boolean equals(Object o) {
+//        if (this == o) return true;
+//        if (!(o instanceof Item item)) return false;
+//        return Objects.equals(getId(), item.getId());
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return Objects.hash(getId());
+//    }
 
 }
