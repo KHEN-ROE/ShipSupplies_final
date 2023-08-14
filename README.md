@@ -97,6 +97,75 @@ sequenceDiagram
 ```
 <br />
 
+## ✅ ERD
+```mermaid
+erDiagram
+    USER {
+        String id
+        String password
+        String newPassword
+        String confirmPassword
+        String email
+        String username
+        String role
+        boolean deleted
+    }
+    BOARD {
+        Long id
+        String title
+        String text
+        Date date
+        User user
+    }
+    COMMENT {
+        Long id
+        String text
+        Date date
+        Long hitCount
+        User user
+        Board board
+    }
+    HIT {
+      Long hit
+      User user
+      Board board
+      Comment comment
+    }
+    ITEM {
+       Long id
+       String item
+       String assembly
+       String company
+       String category
+       String leadtime
+       String machinery
+       String partNo1
+       String partNo2
+       String currency
+       String ship
+       String subject
+       Long price
+       Date date
+    }
+    WISHLIST {
+       String item
+       String category
+       String machinery
+       String currency
+       String company
+       Long price
+       Long leadtime
+       User user
+    }
+    
+    USER ||--o{ BOARD : writes
+    USER ||--o{ COMMENT : writes
+    USER ||--o{ HIT : does
+    USER ||--o{ WISHLIST: has
+    BOARD ||--o{ COMMENT : has
+    BOARD ||--o{ HIT : receives
+    COMMENT ||--o{ HIT : receives
+```
 
 <br />
 
