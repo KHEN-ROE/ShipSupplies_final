@@ -56,7 +56,6 @@ git clone https://github.com/KHEN-ROE/ShipSupplies.git
 > 2. 프론트엔드 디렉토리에서 필요한 패키지를 설치합니다.
 ```javascript
 npm install
-npm install jwt-decode
 ```
 
 > 3. MySQL에서 ship 데이터베이스를 생성합니다. application.yml에서 username과 password를 개인 설정에 맞게 수정합니다.
