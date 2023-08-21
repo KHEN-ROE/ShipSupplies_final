@@ -173,7 +173,7 @@ erDiagram
   - Frontend: React
   - Backend: Spring Boot, JPA
   - Database: MySQL
-  - Data Analysis: tensorflow
+  - Data Analysis: Tensorflow
   - Deployment: AWS, Docker
 
 <br />
