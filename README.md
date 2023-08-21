@@ -65,7 +65,7 @@ npm install
 ## ✅ 역할
 
 > BE
-- API설계
+- REST API설계
 - DB설계
 - Interceptor 이용하여 사용자 인증
 - Validation
