@@ -179,7 +179,7 @@ erDiagram
 <br />
 
 ## ✅ 개발자 정보
- - Name : KEN
+ - Name : 노우권(BE), 김나현(FE), 김현우(DA)
  - Email: shdnrnjs@gmail.com
  - Github : http://github.com/KHEN-ROE
 
