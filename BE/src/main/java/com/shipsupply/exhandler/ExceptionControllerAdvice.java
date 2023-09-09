@@ -12,41 +12,38 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class ExceptionControllerAdvice {
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResult> UserDuplicateExceptionHandler(UserDuplicateException e) {
+    public ResponseEntity<ErrorResult> userDuplicateExceptionHandler(UserDuplicateException e) {
         log.error("[exceptionHandler] ex", e);
         ErrorResult errorResult = new ErrorResult("AlreadyExistUser", e.getMessage());
         return new ResponseEntity<>(errorResult, HttpStatus.CONFLICT);
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResult> EmailDuplicateExceptionHandler(EmailDuplicateException e) {
+    public ResponseEntity<ErrorResult> emailDuplicateExceptionHandler(EmailDuplicateException e) {
         log.error("[exceptionHandler] ex", e);
         ErrorResult errorResult = new ErrorResult("AlreadyExistEmail", e.getMessage());
         return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResult> DeletedUserExceptionHandler(DeletedUserException e) {
+    public ResponseEntity<ErrorResult> deletedUserExceptionHandler(DeletedUserException e) {
         log.error("[exceptionHandler] ex", e);
         ErrorResult errorResult = new ErrorResult("DeletedUser", e.getMessage());
         return new ResponseEntity<>(errorResult, HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResult> WrongPasswordException(WrongPasswordException e) {
+    public ResponseEntity<ErrorResult> wrongPasswordException(WrongPasswordException e) {
         log.error("[exceptionHandler] ex", e);
         ErrorResult errorResult = new ErrorResult("WrongPassword", e.getMessage());
         return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler
-    public ResponseEntity<ErrorResult> SessionExpiredException(SessionExpiredException e) {
+    public ResponseEntity<ErrorResult> sessionExpiredException(SessionExpiredException e) {
         log.error("[exceptionHandler] ex", e);
         ErrorResult errorResult = new ErrorResult("SessionExpired", e.getMessage());
         return new ResponseEntity<>(errorResult, HttpStatus.UNAUTHORIZED);
     }
-
-
-
 }
 
